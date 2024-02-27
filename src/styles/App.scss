@@ -1,0 +1,10 @@
+@import './variables';
+
+.app-container {
+
+  &__drop-down-wrapper {
+    max-width: 820px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+  }
+}
