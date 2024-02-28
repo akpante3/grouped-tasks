@@ -1,0 +1,12 @@
+.list-items {
+    display: flex;
+    align-items: center;
+    &__task-name {
+        margin-left: 12px;
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
