@@ -4,14 +4,33 @@ import ListItem from "./ListItem";
 import ArrowDown from "../icons/ArrowDown";
 import ArrowUp from "../icons/ArrowUp";
 import BookingIcon from "../icons/BookingIcon";
-import { DropDownDetail } from "../types/types"; 
+import { Task } from "../types/types";
+import { ContextState } from "../Context";
+// todo document with doscify
 
-function DropDown({ dropDownDetail }: { dropDownDetail: DropDownDetail }) {
+function DropDown({ name, tasks }: { name: string; tasks: Task[] }) {
   const [showDescriptions, setShowDescriptions] = useState(false);
+  const { handleGroupListUpdate } = ContextState();
+
+  const handleTaskUpdate = (description: string, checked: boolean, value:number) => {
+    const updateTasks = tasks.map((task) => {
+      if (task.description === description) {
+        task.checked = checked;
+      }
+      return task;
+    });
+
+    console.log(updateTasks, 'this task')
+
+    handleGroupListUpdate(name, updateTasks, value, checked)
+  };
   return (
     <div className="drop-down">
       <div className="drop-down__header">
-        <div className="drop-down__header-group"><BookingIcon /><span>{dropDownDetail.name}</span></div>
+        <div className="drop-down__header-group">
+          <BookingIcon />
+          <div className="drop-down__header-group-name">{name}</div>
+        </div>
         <div
           className="drop-down__header-right"
           onClick={() => setShowDescriptions(!showDescriptions)}
@@ -30,15 +49,18 @@ function DropDown({ dropDownDetail }: { dropDownDetail: DropDownDetail }) {
       {showDescriptions ? (
         <div className="drop-down__descriptions">
           <ul>
-            <li>
-              <ListItem />
-            </li>
-            <li>
-              <ListItem />
-            </li>
-            <li>
-              <ListItem />
-            </li>
+            {tasks.map((task, index) => (
+              <li key={index}>
+                <ListItem
+                  description={task.description}
+                  selected={task.checked}
+                  value={task.value}
+                  handleCheckboxClick={() =>
+                    handleTaskUpdate(task.description, !task.checked, task.value)
+                  }
+                />
+              </li>
+            ))}
           </ul>
         </div>
       ) : null}
