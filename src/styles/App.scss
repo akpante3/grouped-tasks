@@ -1,0 +1,15 @@
+@import './variables';
+
+.app-container {
+  font-family: "Source Sans 3", sans-serif;
+  display: flex;
+  justify-content: center;
+  header {
+    padding: 32px 24px 32px 24px
+  }
+  &__drop-down-wrapper {
+    min-width: 820px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+  }
+}
