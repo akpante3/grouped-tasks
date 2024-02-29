@@ -1,8 +1,8 @@
 import ProgressBar from "@ramonak/react-progress-bar";
 
-function AppProgreesBar() {
+function AppProgreesBar({value}:{value: number}) {
   return (
-    <ProgressBar completed={60} bgColor="#00B797" baseBgColor="#F2FBFA" />
+    <ProgressBar completed={value} bgColor="#00B797" baseBgColor="#F2FBFA" />
   );
 }
 

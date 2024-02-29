@@ -3,16 +3,16 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Context from "./Context";
+import AppContext from "./context/AppContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Context>
+    <AppContext>
       <App />
-    </Context>
+    </AppContext>
   </React.StrictMode>
 );
 
