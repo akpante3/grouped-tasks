@@ -2,7 +2,7 @@ import React from "react";
 import DropDown from "./components/DropDown";
 import "./styles/App.scss";
 import AppProgreesBar from "./components/AppProgressBar";
-import { ContextState } from "./Context";
+import { ContextState } from "./context/AppContext";
 import { Group } from "./types/types"; 
 
 function App() {

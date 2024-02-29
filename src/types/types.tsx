@@ -16,3 +16,10 @@ export interface Task {
     handleGroupListUpdate: (name: string, tasks: Task[], value: number, checked: boolean) => void;
     progressBarValue: number;
   }
+
+  export interface ListItemProps {
+    description: string;
+    selected: boolean;
+    value: number;
+    handleCheckboxClick: () => void;
+  }

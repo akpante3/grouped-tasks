@@ -3,14 +3,9 @@ import "../styles/DropDown.scss";
 import CheckboxIcon from "../icons/CheckboxIcon";
 import EmptyCheckboxIcon from "../icons/EmptyCheckboxIcon";
 import "../styles/ListItems.scss";
-import { Task } from "../types/types";
+import { ListItemProps } from "../types/types";
 
-interface ListItemProps {
-    description: string;
-    selected: boolean;
-    value: number;
-    handleCheckboxClick: () => void;
-  }
+
   
 
 function ListItem({description, selected, value, handleCheckboxClick}:ListItemProps) {
@@ -22,7 +17,7 @@ function ListItem({description, selected, value, handleCheckboxClick}:ListItemPr
   }
   return (
     <div className="list-items">
-      <div className="list-items__icon" onClick={() => handleSelctedClick(!isSelected)}>
+      <div  className="list-items__icon" onClick={() => handleSelctedClick(!isSelected)} data-testid="list-items-icon">
         {isSelected ? (
           <CheckboxIcon />
         ) : (

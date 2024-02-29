@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState, useEffect  } from "react";
 import axios from "axios";
-import { GetGroupList } from "./config/api";
+import { GetGroupList } from "../config/api";
 
 
-const GroupContext = createContext()
+export const GroupContext = createContext()
 
-const Context = ({ children }) => {
+const AppContext = ({ children }) => {
   const [groupList, setGroupList] = useState([]);
   const [totalTaskvalue, setTotalTaskValue] = useState(0);
   const [checkedTaskValues, setCheckedTaskValues] =  useState([]);
@@ -94,7 +94,7 @@ const Context = ({ children }) => {
   );
 };
 
-export default Context;
+export default AppContext;
 
 export const ContextState = () => {
   return useContext(GroupContext);
