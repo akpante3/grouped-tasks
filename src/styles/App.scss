@@ -2,16 +2,27 @@
 
 .app-container {
   font-family: "Source Sans 3", sans-serif;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  overflow-y: auto; 
+  width: 100%;
   header {
-    padding: 32px 24px 32px 24px
+    padding: 32px 24px 32px 24px;
+    font-weight: 700;
+    font-size: 22px;
   }
   &__drop-down-wrapper {
     min-width: 820px;
     border: 1px solid $border-color;
-    border-radius: 4px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 1200px) {
+      min-width: 80%;
+      margin:15px
+    }
   }
+  @media only screen and (min-width: 1200px) {
+    justify-content: center;
+    display: flex;
+  }
+
 }

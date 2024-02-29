@@ -24,17 +24,18 @@ const AppContext = ({ children }) => {
     });
     
     setTotalTaskValue(total);
+    console.log(checkedValues, '----')
     setCheckedTaskValues(checkedValues);
   };
 
-  const checkprogressBarPercentage = (value) => {
+  const checkProgressBarPercentage = (value) => {
     let sum = value * (100 / totalTaskvalue);
     return sum;
   };
 
   const progressBarPercentage = () => {
     const percentage = checkedTaskValues.reduce((acc, el) => {
-      return (acc += checkprogressBarPercentage(el));
+      return (acc += checkProgressBarPercentage(el));
     }, 0);
 
     setProgressBarValue(Math.round(percentage));
@@ -55,8 +56,8 @@ const AppContext = ({ children }) => {
     });
 
     let progressCheck = checked
-      ? progressBarValue + checkprogressBarPercentage(value)
-      : progressBarValue - checkprogressBarPercentage(value);
+      ? progressBarValue + checkProgressBarPercentage(value)
+      : progressBarValue - checkProgressBarPercentage(value);
 
     let updateProgress = progressCheck < 1 ? 0 : Math.round(progressCheck);
 
