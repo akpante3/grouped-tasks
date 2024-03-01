@@ -7,10 +7,12 @@ export const GroupContext = createContext()
 
 const AppContext = ({ children }) => {
   const [groupList, setGroupList] = useState([]);
+  // Total value of all tasks across groups
   const [totalTaskvalue, setTotalTaskValue] = useState(0);
   const [checkedTaskValues, setCheckedTaskValues] =  useState([]);
   const [progressBarValue, setProgressBarValue] = useState(0);
 
+// Calculate the total task value of all the tasks in each Group
   const calculateTotalTaskValue = () => {
     let checkedValues = [];
     let total = 0;
@@ -28,6 +30,7 @@ const AppContext = ({ children }) => {
   };
 
   const checkProgressBarPercentage = (value) => {
+    // Nt = Vt * 100 / ∑(Vt)
     let sum = value * (100 / totalTaskvalue);
     return sum;
   };
