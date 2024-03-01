@@ -21,10 +21,9 @@ describe("ListItem Component", () => {
   it("handles checkbox click", () => {
     render(<ListItem {...mockProps} />);
 
-    // Click the checkbox icon
     fireEvent.click(screen.getByTestId("list-items-icon"));
 
-    // Check if handleCheckboxClick is called
     expect(mockProps.handleCheckboxClick).toHaveBeenCalled();
+
   });
 });

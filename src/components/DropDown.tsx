@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/DropDown.scss";
 import ListItem from "./ListItem";
 import ArrowDown from "../icons/ArrowDown";
 import ArrowUp from "../icons/ArrowUp";
 import BookingIcon from "../icons/BookingIcon";
 import { Task } from "../types/types";
-import { ContextState } from "../context/AppContext"
+import { ContextState } from "../context/AppContext";
 // todo document with doscify
 
 function DropDown({ name, tasks }: { name: string; tasks: Task[] }) {
-  const [showDescriptions, setShowDescriptions] = useState(false);
+  const [showTasks, setShowTasks] = useState(false);
   const { handleGroupListUpdate } = ContextState();
 
   const handleTaskUpdate = (
@@ -24,10 +24,9 @@ function DropDown({ name, tasks }: { name: string; tasks: Task[] }) {
       return task;
     });
 
-    console.log(updateTasks, "this task");
-
     handleGroupListUpdate(name, updateTasks, value, checked);
   };
+
   return (
     <div className="drop-down">
       <div className="drop-down__header">
@@ -37,28 +36,28 @@ function DropDown({ name, tasks }: { name: string; tasks: Task[] }) {
         </div>
         <div
           className="drop-down__header-right"
-          onClick={() => setShowDescriptions(!showDescriptions)}
-          data-testid="description-button"
+          onClick={() => setShowTasks(!showTasks)}
+          data-testid="drop-down-button"
         >
-          {showDescriptions ? (
+          {showTasks ? (
             <div
               className="drop-down__header-button"
-              data-testid="description-hide-button"
+              data-testid="drop-down-hide-button"
             >
               <span>Hide</span> <ArrowUp />
             </div>
           ) : (
             <div
               className="drop-down__header-button"
-              data-testid="description-show-button"
+              data-testid="drop-down-show-button"
             >
               <span>Show</span> <ArrowDown />
             </div>
           )}
         </div>
       </div>
-      {showDescriptions ? (
-        <div className="drop-down__descriptions">
+      {/* {showTasks ? ( */}
+        <div className={`drop-down__tasks ${showTasks ? 'drop-down__tasks-active' : ''}`}>
           <ul>
             {tasks.map((task, index) => (
               <li key={index}>
@@ -78,7 +77,7 @@ function DropDown({ name, tasks }: { name: string; tasks: Task[] }) {
             ))}
           </ul>
         </div>
-      ) : null}
+       {/* ) : null} */}
     </div>
   );
 }

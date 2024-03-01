@@ -29,7 +29,9 @@
   &__header-group-name {
     margin-left: 15px
   }
-  &__descriptions{
+  &__tasks{
+    // opacity: 0;
+    // transition: opacity 2s ease-in-out;
     ul {
       padding: 0px;
       margin: 0px;
@@ -46,4 +48,16 @@
       padding-bottom: 20px;
     }
   }
+}
+
+.drop-down__tasks {
+  max-height: 0px;
+  transition: max-height 0.4s ease-out;
+  overflow: hidden;
+   /* Adjust the duration and timing function as needed */
+}
+
+.drop-down__tasks-active {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
 }
