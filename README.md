@@ -139,7 +139,7 @@ Run Test:
 ## Acknowledgments
 
 * [Axios](https://www.npmjs.com/package/axios)
-* [Progress Bar]([https://www.webpagefx.com/tools/emoji-cheat-sheet](https://www.npmjs.com/package/@ramonak/react-progress-bar))
+* [Progress-Bar](https://www.npmjs.com/package/@ramonak/react-progress-bar)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
