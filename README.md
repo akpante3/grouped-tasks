@@ -47,7 +47,7 @@
 ![Screenshot 2024-03-01 at 10 51 50 AM](https://github.com/akpante3/profile-creation/assets/37974813/3040f724-c6b8-4ad9-a0d2-824f55a116b9)
 
 
-This is a widget that shows the current progress of the profile creation of the user. The user can see the missing tasks of a specific area.
+This is a widget that shows the current progress of the profile creation of the user. Users can view the incomplete tasks in a specific area.
 
 Widget Details:
 * Progress bar shows task progression
@@ -79,7 +79,7 @@ Widget Details:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Instructions on setting up this project locally.
+Instructions for setting up this project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -110,7 +110,7 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-If you did everything right from Installation 👆🏾 , The project should be available at http://localhost:3000/
+If you did everything right from Installation 👆🏾: The project should be available at http://localhost:3000/
  
 Run Test: 
 1. Jest
@@ -131,7 +131,7 @@ Run Test:
 
 - [x] UI Implementation
 - [x] API Implementation 
-- [x] Test
+- [x] Testing
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -140,8 +140,8 @@ Run Test:
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Axios](https://www.npmjs.com/package/axios)
-* [Progress-Bar](https://www.npmjs.com/package/@ramonak/react-progress-bar)
+* [Axios library](https://www.npmjs.com/package/axios)
+* [Progress-Bar library](https://www.npmjs.com/package/@ramonak/react-progress-bar)
 
 <a href="https://profile-creation-iota.vercel.app/"><strong>View Hosted Project »</strong></a>
 
