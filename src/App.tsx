@@ -13,7 +13,6 @@ function App() {
   console.log(groupList, 'list')
   return (
     <main className="app-container">
-      <div>
         <header>
           <h3>Lodgify Grouped Tasks</h3>
           <div className="app-container__progress-bar">
@@ -24,7 +23,6 @@ function App() {
         <div className="app-container__drop-down-wrapper">
           { groupList?.map((el:Group , index: number) =>(<DropDown key={index} name={el.name} tasks={el.tasks} />))}
         </div>
-      </div>
     </main>
   );
 }

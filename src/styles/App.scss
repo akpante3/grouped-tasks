@@ -1,28 +1,34 @@
-@import './variables';
+@import "./variables";
 
 .app-container {
   font-family: "Source Sans 3", sans-serif;
   width: 100%;
   header {
-    padding: 32px 24px 32px 24px;
+    padding: 32px 24px;
     font-weight: 700;
     font-size: 22px;
+    background-color: white;
+    @media only screen and (min-width: 1200px) {
+      position: fixed;
+      min-width: calc(820px - 48px);
+    }
   }
   &__drop-down-wrapper {
-    min-width: 820px;
+    min-width: 810px;
     border: 1px solid $border-color;
     border-radius: 6px;
     margin-bottom: 30px;
     overflow: hidden;
-
+    @media only screen and (min-width: 1200px) {
+      margin-top: 200px;
+    }
     @media only screen and (max-width: 1200px) {
       min-width: 80%;
-      margin:15px
+      margin: 15px;
     }
   }
   @media only screen and (min-width: 1200px) {
     justify-content: center;
     display: flex;
   }
-
 }
