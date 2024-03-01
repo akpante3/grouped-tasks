@@ -55,6 +55,8 @@ Widget Details:
 * Responsive UI and can be Accessed on all devices
 * Tasks are grouped into different sections, sections can be opened by clicking the "Show" button and closed with the "Hide" button 
 
+<a href="https://profile-creation-iota.vercel.app/"><strong>View Hosted Project »</strong></a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -140,6 +142,8 @@ Run Test:
 
 * [Axios](https://www.npmjs.com/package/axios)
 * [Progress-Bar](https://www.npmjs.com/package/@ramonak/react-progress-bar)
+
+<a href="https://profile-creation-iota.vercel.app/"><strong>View Hosted Project »</strong></a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
