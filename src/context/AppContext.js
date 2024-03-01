@@ -24,7 +24,6 @@ const AppContext = ({ children }) => {
     });
     
     setTotalTaskValue(total);
-    console.log(checkedValues, '----')
     setCheckedTaskValues(checkedValues);
   };
 
@@ -42,9 +41,13 @@ const AppContext = ({ children }) => {
   };
 
   const getGroupList = async () => {
-    const { data } = await axios.get(GetGroupList());
-
-    setGroupList(data);
+    try {
+      const { data } = await axios.get(GetGroupList());
+      setGroupList(data);
+    } catch(err) {
+      setGroupList([])
+      console.log(err)
+    }
   };
 
   const handleGroupListUpdate = (name, tasks, value, checked) => {
