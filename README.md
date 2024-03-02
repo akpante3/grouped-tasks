@@ -95,11 +95,15 @@ To get a local copy up and running follow these simple example steps.
      ```sh
      https://github.com/akpante3/grouped-tasks.git
      ```
-2. Install NPM packages
+2. Cd into the project directory
+     ```sh
+     cd grouped-tasks
+     ```
+3. Install NPM packages
      ```sh
      npm install
      ```
-3. Start project
+4. Start project
      ```sh
      npm run start
      ```
