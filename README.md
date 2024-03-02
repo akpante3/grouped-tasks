@@ -93,7 +93,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
      ```sh
-     https://github.com/akpante3/profile-creation.git
+     https://github.com/akpante3/grouped-tasks.git
      ```
 2. Install NPM packages
      ```sh
